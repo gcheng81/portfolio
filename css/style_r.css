@@ -171,11 +171,19 @@ header.shadow {
   grid-template-columns: 1fr 1.5fr;
   gap: 1rem;
   margin-top: 2rem;
+  border: 1px solid #ccc;
+}
+
+.about-img{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: center;
+  width: 500px;
 }
  
 .about-img img {
-  width: 60%;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .about-text p {
@@ -184,6 +192,9 @@ header.shadow {
   text-align: justify;
 }
 
+.img-gallery{
+  display: flex;
+}
 
 
 
@@ -297,6 +308,7 @@ header.shadow {
   .home-img {
     order: initial;
   }
+  
   .about-container {
     grid-template-columns: 1fr;
   }
