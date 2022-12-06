@@ -178,7 +178,7 @@ header.shadow {
   margin: 5px;
   border: 1px solid #ccc;
   float: center;
-  width: 500px;
+  width: 300px;
 }
  
 .about-img img {
@@ -192,11 +192,52 @@ header.shadow {
   text-align: justify;
 }
 
-.img-gallery{
+.img-gallery {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 5px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
 
+.ap-gallery {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.ap-gallery > li {
+  flex-basis: 350px; /*width: 350px;*/
+  position: relative;
+  cursor: pointer;
+}
+
+.ap-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.ap-gallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
 
 .portfolio{
   background-color:rgb(193, 228, 249)
@@ -290,11 +331,7 @@ header.shadow {
     display: block;
     background: #E6E6FA;
   }
-  #darkmode {
-    position: absolute;
-    top: 1.4rem;
-    right: 2rem;
-  }
+  
   .scroll-down {
     display: none;
   }
@@ -333,6 +370,10 @@ header.shadow {
   .contact-button{
     margin-left: 25%;
   }
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 @media (max-width: 340px) {
   :root {
@@ -352,10 +393,15 @@ header.shadow {
   .portfolio-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   }
+  
   .contact-form form{
     width: 300px;
   }
   .contact-button{
     margin-left: 25%;
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
