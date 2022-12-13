@@ -13,7 +13,7 @@
 
 :root {
   --main-color: #033a80;
-  --bg-color: #fff;
+  --bg-color: rgb(200, 226, 249);
   --text-color: #0f0c27;
   --hover: hsl(260, 92%, 70%);
  
@@ -277,7 +277,7 @@ header.shadow {
   display: grid;
   place-items: center;
   padding: 20px;
-  background: #E6E6FA;
+  background: --bg-color;
   color: #000;
   font-size: 1rem;
   font-weight: 200;
